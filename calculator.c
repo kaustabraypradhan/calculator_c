@@ -7,8 +7,9 @@ int main() {
     char ch1='n';
     do{
         char b;
-        printf("Enter which operator to be used.\n(+)---->addition\n(-)---->subtraction\n(*)---->multiplication\n(/)---->division \n");
-        printf("(s)---->sq root\n(c)---->cube root\n");
+        printf("Enter which operator to be used.\n(+)---->Addition\n(-)---->Subtraction\n");
+        printf("(*)---->Multiplication\n(/)---->Division \n(e)---->Power function\n");
+        printf("(s)---->Sq root\n(c)---->Cube root\n");
         scanf(" %c",&b);
         
         switch(b){
@@ -89,6 +90,24 @@ int main() {
                         scanf("%f",&n);
                         printf("Result : %f",pow(n,0.333333));
                         break;}
+
+            case 'e' : {
+                        char conf;double ans,base,power;int P=1; 
+                        while(P==1){
+                        printf("Enter Base : ");
+                        scanf("%lf",&base );
+                        printf("Enter Power : ");
+                        scanf("%lf",&power);
+                        ans = pow(base,power);
+                        printf("Result : %lf\n",ans);
+                        printf("\nWant calculate more? [y/n] : ");
+                        scanf(" %c",&conf);
+                        if(conf=='n'||conf=='N'){
+                            P=0;
+                        }
+                        }
+                        break;
+            }
 
             default : printf("No operations selected\n");
         }
