@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
+//version~0.1
 //simple calculator
 
 int main() {
@@ -27,6 +28,7 @@ int main() {
                         printf("Sum = %f\n",sum);
                         break;}
 
+                        
             case '-' : {float sub=0,s1=0;char ch;
                         printf("Enter a number: ");
                         scanf("%f",&sub);
